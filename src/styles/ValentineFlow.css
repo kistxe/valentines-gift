@@ -5,6 +5,7 @@
   --color-pink: #ff69b4;
   --color-red: #ff1744;
   --color-dark-red: #c41c3b;
+  --color-mid-red: #e13753;
   --color-light-pink: #ffb6d9;
   --color-white: #ffffff;
   --color-cream: #fff5f7;
@@ -633,12 +634,17 @@ body {
 
 .letter-title {
   font-size: 42px;
-  color: var(--color-red);
+  color: var(--color-mid-red);
+  background: linear-gradient(120deg, var(--color-mid-red) 0%, #ff5f7a 45%, var(--color-mid-red) 80%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   margin-bottom: 10px;
   font-family: var(--font-accent);
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  animation: letter-pulse 2s ease-in-out infinite;
+  animation: letter-pulse 2s ease-in-out infinite, letter-shine 3s ease-in-out infinite;
 }
 
 .letter-subtitle {
@@ -663,6 +669,18 @@ body {
   }
   50% {
     transform: scale(1.05);
+  }
+}
+
+@keyframes letter-shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
