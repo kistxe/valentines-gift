@@ -447,7 +447,7 @@ const ValentineFlow: React.FC = () => {
         <div className="valentine-card">
           <h2 className="final-message">Go ask LeBron to be your Valentine then 😞</h2>
           <div className="lebron-image-placeholder">
-            <img src="/assets/lebron.jpg" alt="LeBron" className="placeholder-img" />
+            <img src={`${import.meta.env.BASE_URL}assets/lebron.jpg`} alt="LeBron" className="placeholder-img" />
           </div>
           <p className="sad-face">😭</p>
           <button onClick={handleRestart} className="restart-button">
